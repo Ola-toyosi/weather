@@ -32,22 +32,24 @@
     </form>
 
     <div class="col-12 offset-md-4">
+        {% for weather in weather_data %}
         <div class="card mb-6 h-auto w-25">
             <div class="row g-0 ">
                 <div class="col-md-3">
-                    <img alt="Image" src="http://openweathermap.org/img/w/10d.png">
+                    <img alt="Image" src="http://openweathermap.org/img/w/{{ weather.icon }}.png">
                 </div>
                 <div class="col-md-9">
                     <div class="card-body">
-                        <h5 class="card-title">Las Vegas</h5>
-                        <p class="card-text">29° F
+                        <h5 class="card-title">{{ weather.city }}</h5>
+                        <p class="card-text">{{ weather.temperature }}° F
                             <br>
-                            <small class="text-muted">thunderstorm with heavy rain</small>
+                            <small class="text-muted">{{ weather.description }}</small>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
 
