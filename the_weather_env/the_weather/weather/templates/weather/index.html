@@ -17,16 +17,15 @@
 
 <div class=" container py-5 text-center">
     <form class="row row-cols-lg-auto g-3 align-items-center" method="POST">
-        <!--        <div class="row gy-2 gx-3 align-items-center">-->
+        {% csrf_token %}
         <div class="col-12 offset-md-4">
-            <label class="visually-hidden" for="inlineFormInputGroupCity">City</label>
             <div class="input-group">
-                <input class="form-control" id="inlineFormInputGroupCity" placeholder="City name" type="text">
+                {{ form.name }}
             </div>
         </div>
 
         <div class="col-12">
-            <button class="btn btn-primary" type="submit">Submit</button>
+            <button class="btn btn-primary" type="submit">Add City</button>
         </div>
         <!--        </div>-->
     </form>
