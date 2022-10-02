@@ -6,7 +6,6 @@ from .models import City
 # Create your views here.
 
 def index(request):
-    appid = '57446644697e84d1d693192b0a07fc67'
     url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid=YOUR_APP_KEY'
 
     cities = City.objects.all()  # return all cities in the database
